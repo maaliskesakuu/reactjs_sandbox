@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import './Person.css';
 
-const Person = () => {
+const Person = (props) => {
   return (
-    <div class="card">
-      <p>Hello, my name is Tanja and I am 44 years old.</p> 
+    <div className='card'>
+      <p>Hello, my name is {props.name} and I am {props.age} years old.</p> 
     </div>
-    );
+  );
 };
 
 export default Person;

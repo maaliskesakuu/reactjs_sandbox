@@ -1,7 +1,9 @@
 .card {
   background:linen;
-  width: 25%;
+  width: 35%;
   border-radius: 5px;
-  box-shadow: 0 0 px black;
+  box-shadow: 0 3px 5px #555;
   padding: 1rem;
+  margin-left: 5vw;
+  text-align: center;
 }
