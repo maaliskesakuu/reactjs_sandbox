@@ -1,3 +1,3 @@
 # reactjs_sandbox
 
-These are school tasks of React.
+This folder contain school tasks.
