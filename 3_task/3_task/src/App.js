@@ -7,17 +7,14 @@ class App extends Component {
   };
 
   addHandler = () => {
-    console.log('test');
     this.setState({ likes: this.state.likes + 1})
   };
 
   minusHandler = () => {
-    console.log('Test');
     this.setState({ likes: this.state.likes - 1 })
   };
 
   resetHandler = () => {
-    console.log('testing');
     if (this.state.likes > 0) {
       this.setState({likes: this.state.likes - this.state.likes})
     } else if (this.state.likes < 0) {
@@ -28,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Total likes: {this.state.likes}</h1>
+        <h1 className={this.state.likes === 0 ? "likes" :this.state.likes % 2 === 0 ? "likes even" : "likes odd"}>Total likes: {this.state.likes}</h1>
         <button onClick={this.addHandler}>Add a like</button>
         <button onClick={this.minusHandler}>Remove a like</button>
         <button onClick={this.resetHandler}>Reset</button>
