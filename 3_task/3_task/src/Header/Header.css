@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #FFE5DD;
+  height: 15vh;
+  margin-bottom: 7vh;
+  display: flex;
+  align-items: center;  
+}
+
+.title {
+  flex: 1;
+  margin: 2rem;
+}
+
+.date {
+  margin: 2rem;
+}
