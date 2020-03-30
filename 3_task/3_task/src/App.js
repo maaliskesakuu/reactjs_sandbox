@@ -18,7 +18,11 @@ class App extends Component {
 
   resetHandler = () => {
     console.log('testing');
-    this.setState({ likes: this.state.likes = 0 })
+    if (this.state.likes > 0) {
+      this.setState({likes: this.state.likes - this.state.likes})
+    } else if (this.state.likes < 0) {
+      this.setState({likes: this.state.likes - this.state.likes})
+    }
   };
 
   render() {
