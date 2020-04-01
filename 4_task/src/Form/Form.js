@@ -1,17 +1,23 @@
 import React from 'react';
 import './Form.css'
 
-const Form = () =>{
+const Form = (props) => {
   return (
-    <div>
-      <label htmlFor="firstName">First name</label>
-      <input type="text" name="firstName" id="firstName" />
-      <label htmlFor="lastName">Last name</label>
-      <input type="text" name="lastName" id="lastName" />
-      <label htmlFor="phoneNumber">Phone number</label>
-      <input type="number" name="phoneNumber" id="phoneNumber" />
-      <label htmlFor="message">Message</label>
-      <textarea name="message" id="message" ></textarea>
+    <div className="form">
+      <form>
+        <label htmlFor="firstname">First name
+          <input type="text" name="firstname" id="firstname" onChange={props.onchange}/>
+        </label><br />
+        <label htmlFor="lastname">Last name
+          <input type="text" name="lastname" id="lastname" />
+        </label>< br />
+        <label htmlFor="phonenumber">Phone number
+          <input type="number" name="phonenumber" id="phonenumber" />
+        </label><br />
+        <label htmlFor="message">Message
+          <textarea name="message" id="message"></textarea>
+        </label><br />
+      </form>
     </div>
   )
 }

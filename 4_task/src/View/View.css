@@ -1,1 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+input, textarea {
+  font-family: 'Dancing Script', cursive;
+  border: none;
+}
+
+h1 {
+  margin: 1rem;
+}
+
+.formView {
+  margin: 1rem;
+  background-color: #F9EAFF;
+  box-shadow: 0 0 5px #665584;
+  border-radius: 5px;
+}
+
+.formView input {
+  background-color: #F9EAFF;
+}
+
+.formView input::placeholder {
+  font-size: larger;
+}
+
+.formView label {
+  margin-left: 3vw;
+  padding-left: 2vw;
+}
+
+p {
+  border-bottom: 1px dashed #665584;
+}
+
+p:last-child {
+  border-bottom: none;
+}
