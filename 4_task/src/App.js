@@ -6,6 +6,7 @@ import View from './View/View';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.changeHandler = this.changeHandler.bind(this);
     this.state = {
       firstname: '',
       lastname: '',
