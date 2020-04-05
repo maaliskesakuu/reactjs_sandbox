@@ -5,7 +5,7 @@ const Form = props => {
   return (
     <div className="form">
       <form>
-        <h1>{props.children}</h1>
+        {props.children}
         <label htmlFor="firstname">First name
           <input type="text" name="firstname" id="firstname" onChange={props.mychange}/>
         </label><br />
