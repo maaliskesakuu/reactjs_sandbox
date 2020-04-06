@@ -3,7 +3,14 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background-color: red;
-  margin: 1rem;
+  margin: 3rem 1.5rem;
   box-shadow: 0 0 5px #333;
+}
+
+.circle {
+  cursor: pointer;
+}
+
+.circle.active {
+  background: url('sheep.svg');
 }
