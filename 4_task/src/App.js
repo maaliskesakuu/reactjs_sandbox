@@ -4,15 +4,12 @@ import Form from './Form/Form';
 import View from './View/View';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       firstname: '',
       lastname: '',
       phonenumber: '',
       message: ''
     };
-  }
 
   changeHandler = event => {
     this.setState({
