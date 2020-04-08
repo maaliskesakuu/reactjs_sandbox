@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 h1 {
-  margin: 10vh auto;
+  margin: 15vh auto 3vh;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+p {
+  line-height: 2rem;
+  color: white;
 }
 
 button {
+  width: 15vw;
   font-family: 'Press Start 2P', cursive;
+  background-color: rgb(253,187,45);
   text-transform: uppercase;
   margin: 1rem;
   padding: 0.8rem;
-  border: 1px solid rgb(34,193,195);
-  box-shadow: 0 2px 2px rgb(34,193,195);
-  border-radius: 2px;
+  border: 2px solid #A83900;
+  box-shadow: 0 3px 3px #A83900;
+  border-radius: 25px;
 }
 
 button:hover {
@@ -22,3 +32,7 @@ button:hover {
   text-align: center;
 }
 
+span {
+  color: #A83900;
+  font-size: x-large;
+}
