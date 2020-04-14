@@ -6,18 +6,18 @@ const Form = props => {
     <div className="form">
       <form>
         {props.children}
-        <label htmlFor="firstname">First name
+        <label htmlFor="firstname">First name</label>
           <input type="text" name="firstname" id="firstname" onChange={props.mychange}/>
-        </label><br />
-        <label htmlFor="lastname">Last name
+        <br />
+        <label htmlFor="lastname">Last name</label>
           <input type="text" name="lastname" id="lastname" onChange={props.mychange} />
-        </label>< br />
-        <label htmlFor="phonenumber">Phone number
+        < br />
+        <label htmlFor="phonenumber">Phone number</label>
           <input type="tel" name="phonenumber" id="phonenumber" onChange={props.mychange} />
-        </label><br />
-        <label htmlFor="message">Message
+        <br />
+        <label htmlFor="message">Message</label>
           <textarea name="message" id="message" onChange={props.mychange} rows="5"></textarea>
-        </label><br />
+        <br />
       </form>
     </div>
   )

@@ -8,6 +8,10 @@ form {
   margin-bottom: 1rem;
 }
 
+label {
+  display: inline-block;
+}
+
 form input, form textarea {
   font-family: 'Arial';
   font-size: larger;
