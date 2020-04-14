@@ -41,7 +41,7 @@ class App extends Component {
   };
 
   clickHandler = (circleID) => {
-    let audio = new Audio("/sheep.mp3");
+    let audio = new Audio("/sheep_lamb.mp3");
 
     console.log('Clicked', circleID);
 
@@ -63,7 +63,7 @@ class App extends Component {
   };
 
   endHandler = () => {
-    let audio = new Audio("/sheep_lamb.mp3");
+    let audio = new Audio("/sheep.mp3");
     clearTimeout(this.timer);
 
     this.setState({
@@ -76,7 +76,7 @@ class App extends Component {
   render() {
     return (
       <div className="speedgame">
-        <h1>Catch the sheep</h1>
+        <h1>Catch the Sheep</h1>
         <p>You have caught <span>{this.state.score}</span> sheep</p>
         <main>
           <Circle active={this.state.current === 1} buttonColor='#22C1C3' myClick={this.clickHandler.bind(this, 1)}/>
