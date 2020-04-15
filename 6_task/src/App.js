@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+// import Lecture from './Lecture/Lecture';
+// import MapMethod from './Lecture/MapMethod';
+import Post from './Post/Post';
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Post />
+      </div>
+    );
+  }
 }
 
 export default App;
+

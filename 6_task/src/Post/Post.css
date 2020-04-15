@@ -1,0 +1,10 @@
+body {
+  background-color: whitesmoke;
+}
+
+.card {
+  border: 1px solid black;
+  margin: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 5px black;
+}
