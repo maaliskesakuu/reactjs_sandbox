@@ -1,18 +1,14 @@
 import React from 'react';
 import './Post.css';
 
-const Post = () => {
+const Post = props => {
 	return (
-		<div>
-      <div class="card">
-        <p>title</p>
-        <p>author</p>
-        <p>description</p>
-        <p>image</p>
-      </div>
-			<div></div>
-			<div></div>
-			<div></div>
+    <div className="card">
+      <img src={props.img} alt={props.title}/>
+      <h2>{props.title}</h2>
+      <p>{props.author}</p>
+      <p>{props.description}</p>
+      <button onClick={props.onclick}>Remove</button>
 		</div>
 	);
 };

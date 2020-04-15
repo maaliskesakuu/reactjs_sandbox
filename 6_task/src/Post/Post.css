@@ -1,10 +1,40 @@
-body {
-  background-color: whitesmoke;
+p:nth-child(3) {
+  font-style: italic;
+}
+
+.cards {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem;
 }
 
 .card {
-  border: 1px solid black;
-  margin: 2rem;
+  background-color: whitesmoke;
+  border: 1px solid #BDBDBD;
   padding: 2rem;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 3px 5px #BDBDBD;
+  min-height: 50vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0.8rem;
+  font-size: medium;
+  border: none;
+  color: white;
+  background-color: #005A34;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #BDBDBD;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #BDBDBD,
+  2px 2px 5px #BDBDBD;
 }
