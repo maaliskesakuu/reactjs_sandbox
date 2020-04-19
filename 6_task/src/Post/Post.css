@@ -21,6 +21,7 @@ p:nth-child(3) {
 img {
   width: 100%;
   height: auto;
+  border: 1px solid #005A34;
 }
 
 button {
@@ -37,4 +38,19 @@ button:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px #BDBDBD,
   2px 2px 5px #BDBDBD;
+  text-decoration: underline;
+}
+
+.like_container {
+  display: inline-block;
+  margin-left: 5vw;
+}
+
+.like_container:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.total {
+  margin-left: 3vw;
 }

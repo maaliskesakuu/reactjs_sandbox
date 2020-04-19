@@ -9,7 +9,7 @@ const cards = [
 		title: 'Lorem ipsum dolor sit amet',
 		author: 'John Joe',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit vel metus at commodo. Class.',
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui tellus, malesuada nec maximus sed, dignissim et purus. Quisque commodo tellus et nunc varius, ut sodales dui mattis. Morbi et condimentum arcu. In eget molestie velit. Duis aliquet, ex id ornare mollis, felis turpis egestas arcu, at auctor enim lacus.',
 		img: 'https://source.unsplash.com/featured/?car',
 	},
 	{
@@ -17,7 +17,7 @@ const cards = [
 		title: 'Lorem ipsum',
 		author: 'Matt Joe',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi.',
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet feugiat metus, eget suscipit erat. Quisque volutpat dapibus risus, et dapibus sem mattis at. Duis porttitor sodales ligula, eu lobortis nisl iaculis vel. Vivamus lobortis lorem quis ex congue.',
 		img: 'https://source.unsplash.com/featured/?truck',
 	},
 	{
@@ -25,7 +25,7 @@ const cards = [
 		title: 'Lorem ipsum dolor sit',
 		author: 'Richard Joe',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper velit tempor.',
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non justo enim. Proin nibh tortor, interdum ut magna vel, porta tristique lacus. Praesent eget facilisis sapien. Praesent velit augue, interdum id massa non, cursus rhoncus.',
 		img: 'https://source.unsplash.com/featured/?scooter',
 	},
 	{
@@ -33,14 +33,14 @@ const cards = [
 		title: 'Lorem ipsum dolor',
 		author: 'Carl Joe',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet.',
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra, arcu et tincidunt vestibulum, tellus velit tincidunt leo, nec vestibulum dolor orci id tortor. Aenean venenatis magna id urna blandit, vel imperdiet elit accumsan. Fusce efficitur vel quam.',
 		img: 'https://source.unsplash.com/featured/?bicycle',
 	},
 	{
 		id: 5,
 		title: 'Lorem',
 		author: 'Gary Joe',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit mauris, commodo ac ornare non, iaculis id quam. Fusce a lectus vitae magna ultricies lobortis. Curabitur mi enim, tincidunt non fringilla non, commodo ullamcorper dui. Fusce mattis eget eros sit amet fringilla.',
 		img: 'https://source.unsplash.com/featured/?vespa',
 	},
 ];
@@ -48,13 +48,20 @@ const cards = [
 class App extends Component {
 	state = {
 		cards: cards,
+		likes: 0
   };
   
   removeHandler = removeId => {
     const myOldCards = [...this.state.cards];
     myOldCards.splice(removeId, 1);
     this.setState({ cards: myOldCards });
-  }
+	}
+	
+	addLikes = id => {
+		this.setState({
+			likes: this.state.likes + 1,
+		})
+	};
 
 	render() {
 		const cardsList = this.state.cards.map((card, index) => {
@@ -66,6 +73,8 @@ class App extends Component {
 					author={card.author}
 					description={card.description}
 					img={card.img}
+					likes={this.addLikes.bind(this, index)}
+					totalLikes={this.state.likes}
 				/>
 			);
 		});
