@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is my fifth task in React.
 
-![A screenshot of my form](./public/screenshot.png?raw=true)
+![A screenshot of my form](./public/screenshot1.png?raw=true)
