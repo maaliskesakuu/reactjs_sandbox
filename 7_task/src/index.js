@@ -5,6 +5,6 @@ import App from './App';
 import Lecture from './lecture';
 
 ReactDOM.render(
-  <Lecture /> , document.getElementById('root')
+  <App /> , document.getElementById('root')
 );
 
