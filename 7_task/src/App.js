@@ -1,25 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import Button from './Button';
+import Content from './Content';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
-
-const Button = ({ click, text, children }) => {
-	return (
-		<>
-      <button onClick={click}>{text} {children}</button>
-		</>
-	);
-};
-
-const Content = () => {
-  return (
-    <div>
-      <h1>Votes:</h1>
-      <p>Likes:</p>
-      <p>Dislikes:</p>
-    </div>
-  )
-}
+import { faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
 	const [likes, setLikes] = useState(0);
@@ -33,14 +17,12 @@ const App = () => {
   }
 
 	return (
-		<div className="box">
-      <Button click={addLikes} text="Like"><FontAwesomeIcon icon={faThumbsUp}></FontAwesomeIcon></Button>
-			<Button click={addDislikes} text="Dislike"><FontAwesomeIcon icon={faThumbsDown}></FontAwesomeIcon></Button>
+    <div className="box">
+      <h2>Do you like Marvel movies?</h2>
+      <Button click={addLikes} text="Like"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></Button>
+			<Button click={addDislikes} text="Dislike"><FontAwesomeIcon icon={faHeartBroken}></FontAwesomeIcon></Button>
       <Button click={resetLikes} text="Reset" />
-      <h1>Votes:</h1>
-      <p>Likes: {likes}</p>
-      <p>Dislikes: {dislikes}</p>
-      {/* <Content/> */}
+      <Content likes={likes} dislikes={dislikes}/>
 		</div>
 	);
 };

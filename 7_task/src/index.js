@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Lecture from './lecture';
+// import Lecture from './lecture';
 
 ReactDOM.render(
   <App /> , document.getElementById('root')
