@@ -11,6 +11,7 @@ p:nth-child(3) {
 }
 
 .card {
+  position: relative;
   background-color: whitesmoke;
   border: 1px solid #BDBDBD;
   padding: 2rem;
@@ -21,36 +22,32 @@ p:nth-child(3) {
 img {
   width: 100%;
   height: auto;
-  border: 1px solid #005A34;
+  box-shadow: 0 0 10px #BDBDBD, 0 0 20px #BDBDBD;
 }
 
 button {
-  padding: 0.8rem;
+  padding: 1rem;
   font-size: medium;
   border: none;
   color: white;
   background-color: #005A34;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px #BDBDBD;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #BDBDBD;
 }
 
-button:hover {
+button:hover, .like_container:hover  {
   cursor: pointer;
   box-shadow: 5px 5px 5px #BDBDBD,
   2px 2px 5px #BDBDBD;
-  text-decoration: underline;
 }
 
 .like_container {
-  display: inline-block;
-  margin-left: 5vw;
+  display: block;
+  margin-top: 1rem;
 }
 
-.like_container:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.total {
-  margin-left: 3vw;
+.trash {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
