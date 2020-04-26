@@ -1,22 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: #FF8961;
+}
+
+h1, h2 {
+  margin-bottom: 3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .box {
   background-color: #ffe4c4;
-  margin: 5vh 2vw;
-  padding: 2rem;
+  margin: 2rem;
+  padding: 3rem;
   border-radius: 3px;
+  min-height: 1000px;
 }
 
 button {
   padding: 1rem 2rem;
   margin-right: 2rem;
+  margin-bottom: 3rem;
   border-radius: 5px;
   border: none;
   background-color: #CDB6BA;
   box-shadow: 0 3px 3px #FF8961, 0 0 2px #FF8961;
   font-size: medium;
 }
+
+img {
+  box-shadow: 0 5px 25px #CDB6BA, 0 5px 10px #CDB6BA, 0 0 5px #CDB6BA;
+  border-radius: 3px;
+  border: 1px solid #CDB6BA;
+  width: 25%;
+}
+
+.marvel {
+  float: right;
+  margin-left: 2rem;
+}
+
+/* Photo by Elijah O'Donnell on Unsplash */
+
+.groot {
+  float: left;
+  margin-right: 2rem;
+}
+
+/* Photo by Azmathulla Shaik on Unsplash */

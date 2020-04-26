@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Button from './Button';
 import Content from './Content';
+import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,7 +19,7 @@ const App = () => {
 
 	return (
     <div className="box">
-      <h2>Do you like Marvel movies?</h2>
+      <Header />
       <Button click={addLikes} text="Like"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></Button>
 			<Button click={addDislikes} text="Dislike"><FontAwesomeIcon icon={faHeartBroken}></FontAwesomeIcon></Button>
       <Button click={resetLikes} text="Reset" />
