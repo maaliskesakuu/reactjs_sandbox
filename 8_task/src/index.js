@@ -5,8 +5,7 @@ import App from './App';
 import Simplerouting from './simplerouting';
 import Nestedrouting from './nestedrouting';
 
-
 ReactDOM.render(
-    <Nestedrouting />,
+    <App/>,
   document.getElementById('root')
 );
