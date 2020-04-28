@@ -6,6 +6,6 @@ import Simplerouting from './simplerouting';
 import Nestedrouting from './nestedrouting';
 
 ReactDOM.render(
-    <App/>,
+    <App />,
   document.getElementById('root')
 );

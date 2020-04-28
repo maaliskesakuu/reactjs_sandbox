@@ -1,4 +1,4 @@
-h2 {
+h2, p {
   margin-bottom: 1rem;
 }
 
@@ -20,10 +20,14 @@ h2 {
   height: 75vh;
 }
 
-.read_me {
-  border: 2px solid #8685EF;
-  padding: .5rem;
-  margin-top: 1rem;
+.read_mores {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.read_more {
+  /* border: 2px solid #8685EF; */
+  /* padding: .5rem; */
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 2px 2px #8685EF;

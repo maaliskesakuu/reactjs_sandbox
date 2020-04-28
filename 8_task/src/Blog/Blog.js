@@ -9,7 +9,6 @@ const posts = [
 		title: 'Lorem ipsum dolor sit amet',
 		desc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui tellus, malesuada nec maximus sed, dignissim t purus.',
-		link: 'Read more',
 	},
 	{
 		id: 2,
@@ -17,7 +16,6 @@ const posts = [
 		title: 'Lorem ipsum',
 		desc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet feugiat metus, eget suscipit erat. Quisque volutpat dapibus risus, et dapibus sem mattis at.',
-		link: 'Read more',
 	},
 	{
 		id: 3,
@@ -25,7 +23,6 @@ const posts = [
 		title: 'Lorem ipsum dolor',
 		desc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra, arcu et tincidunt vestibulum, tellus velit tincidunt leo, nec vestibulum dolor orci id tortor.',
-		link: 'Read more',
 	},
 	{
 		id: 4,
@@ -33,7 +30,6 @@ const posts = [
 		title: 'Lorem ipsum dolor sit',
 		desc:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non justo enim. Proin nibh tortor, interdum ut magna vel, porta tristique lacus. Praesent eget facilisis sapien.',
-		link: 'Read more',
 	},
 ];
 
@@ -50,7 +46,6 @@ class Blog extends Component {
 					img={post.img}
 					title={post.title}
 					desc={post.desc}
-					link={post.link}
 				/>
 			);
 		});

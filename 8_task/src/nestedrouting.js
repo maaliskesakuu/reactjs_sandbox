@@ -52,7 +52,7 @@ const Courses = () => {
 				</li>
 			</ul>
 			<Switch>
-				<Route path={`{path}/about`} component={About} />
+				<Route path={`${path}/about`} component={About} />
 				<Route path={`${path}/:CourseId`}>
 					<Topic />
 				</Route>

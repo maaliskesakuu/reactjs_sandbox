@@ -1,5 +1,6 @@
 import React from 'react';
 import './Post.css';
+import Posts from '../Posts';
 
 const Post = props => {
   return (
@@ -8,7 +9,7 @@ const Post = props => {
         <img src={props.img} alt={props.title} />
         <h2>{props.title}</h2>
         <p>{props.desc}</p>
-        <p class="read_me">{props.link}</p>
+        <Posts />
       </div>
     </div>
   );
