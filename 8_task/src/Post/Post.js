@@ -23,25 +23,4 @@ const Topic = () => {
 	)
 };
 
-// const Post = () => {
-// 	let { path, url } = useRouteMatch();
-// 	return (
-// 		<div>
-// 			<ul className="read_mores">
-// 				<li>
-// 					<Link className="read_more" to={`${url}/Post`}>
-// 						Read more
-// 					</Link>
-// 				</li>
-// 			</ul>
-// 			<Switch>
-// 				<Route path={`${path}/:PostId`}>
-// 					<Topic />
-// 				</Route>
-// 				<Route path={`${path}/blog`} component={Blog} />
-// 			</Switch>
-// 		</div>
-// 	);
-// };
-
 export default Topic;
