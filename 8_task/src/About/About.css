@@ -1,0 +1,19 @@
+.about_content {
+  display: grid;
+  height: 100vh;
+  justify-items: start;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+
+#vespa {
+  border-radius: 3px;
+  box-shadow: 0 0 3px #FAF7FF;
+}
+
+.about_text {
+  grid-column: 2 /span2;
+  line-height: 1.6rem;
+}

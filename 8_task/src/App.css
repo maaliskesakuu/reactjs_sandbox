@@ -43,14 +43,6 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-#vespa {
-  float: left;
-  width: 30vw;
-  margin: 0 2rem 2rem;
-  border-radius: 3px;
-}
-
-.about_text {
-  margin: 2rem;
-  line-height: 1.6rem;
+a:active {
+  text-decoration-color: #FAF7FF;
 }

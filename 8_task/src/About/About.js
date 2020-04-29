@@ -1,8 +1,9 @@
 import React from 'react';
+import './About.css';
 
 const About = () => {
 	return (
-		<div>
+		<div class="about_content">
 			<img id="vespa" src="https://source.unsplash.com/featured/?vespa" alt="vespa"></img>
 			<p class="about_text">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum nunc

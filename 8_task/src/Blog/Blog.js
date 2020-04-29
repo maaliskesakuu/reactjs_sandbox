@@ -1,7 +1,7 @@
 import React from 'react';
 import './Blog.css';
 import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
-import Topic from '../Post';
+import Topic from '../Post/Post';
 import posts from '../posts';
 
 const Blog = () => {
@@ -15,7 +15,9 @@ const Blog = () => {
 				<div>
 					<h2>{post.title}</h2>
 					<p>{post.desc}</p>
-					<Link to={`${match.url}/${post.title}`}>Read more</Link>
+					<Link to={`${match.url}/${post.title}`}>
+						<div className="read_more">Read more</div>
+					</Link>
 				</div>
 			</div>
 		);

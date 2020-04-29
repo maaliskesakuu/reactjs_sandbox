@@ -1,0 +1,36 @@
+h2, p {
+  margin-bottom: 1rem;
+}
+
+.blog_posts {
+	display: grid;
+	align-items: flex-start;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+	margin: 2rem;
+}
+
+.blog_item {
+	position: relative;
+	height: 100vh;
+	overflow: scroll;
+}
+
+.blog_item_img {
+	border-radius: 3px;
+	box-shadow: 0 0 3px #faf7ff;
+}
+
+.blog_item_text {
+  grid-column: 2 /span2;
+  line-height: 1.6rem;
+}
+
+.return {
+  padding: .5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #4A4857;
+  color: black;
+  background-color: #8685EF;
+  max-width: 25vw;
+}
