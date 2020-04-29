@@ -5,14 +5,16 @@ const Nav = () => {
 	return (
 		<nav>
 			<div>
-				<logo>Tanja Lehtinen</logo>
+				<Link to="/">
+					<logo>Tanja Lehtinen</logo>
+					</Link>
 			</div>
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<Link to="/" exact>Home</Link>
 				</li>
 				<li>
-					<Link to="/about">About me</Link>
+					<Link to="/about">About</Link>
 				</li>
 				<li>
 					<Link to="/blog">Blog</Link>

@@ -3,3 +3,38 @@ img {
   margin-bottom: 1rem;
   box-shadow: 0 0 3px #4A4857;
 }
+
+h2, p {
+  margin-bottom: 1rem;
+}
+
+.post_items {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+
+.post_item {
+  position: relative;
+  background-color: #FAF7FF;
+  color: black;
+  border: 1px solid #333333;
+  padding: 2rem;
+  box-shadow: 0 3px 5px #333333;
+  height: 75vh;
+}
+
+.read_mores {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.read_more {
+  border: 2px solid #8685EF;
+  padding: .5rem;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 2px #8685EF;
+}

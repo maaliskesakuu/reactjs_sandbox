@@ -1,44 +1,32 @@
-import React from 'react';
-import {
-	Switch,
-	Route,
-	Link,
-	useRouteMatch,
-	useParams,
-} from 'react-router-dom';
-import About from './About';
+const posts = [
+	{
+		id: 1,
+		img: 'https://source.unsplash.com/featured/?cat',
+		title: 'Lorem ipsum dolor sit amet',
+		desc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui tellus, malesuada nec maximus sed, dignissim t purus.',
+	},
+	{
+		id: 2,
+		img: 'https://source.unsplash.com/featured/?dog',
+		title: 'Lorem ipsum',
+		desc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet feugiat metus, eget suscipit erat. Quisque volutpat dapibus risus, et dapibus sem mattis at.',
+	},
+	{
+		id: 3,
+		img: 'https://source.unsplash.com/featured/?sheep',
+		title: 'Lorem ipsum dolor',
+		desc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra, arcu et tincidunt vestibulum, tellus velit tincidunt leo, nec vestibulum dolor orci id tortor.',
+	},
+	{
+		id: 4,
+		img: 'https://source.unsplash.com/featured/?lamb',
+		title: 'Lorem ipsum dolor sit',
+		desc:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non justo enim. Proin nibh tortor, interdum ut magna vel, porta tristique lacus. Praesent eget facilisis sapien.',
+	},
+];
 
-const Posts = () => {
-	let { path, url } = useRouteMatch();
-	return (
-		<div>
-			<ul className="read_mores">
-				<li>
-					<Link className="read_more" to={`${url}/Post1`}>Read more 1</Link>
-				</li>
-				<li>
-					<Link className="read_more" to={`${url}/Post2`}>Read more 2</Link>
-				</li>
-				<li>
-					<Link className="read_more" to={`${url}/Post3`}>Read more 3</Link>
-				</li>
-				<li>
-					<Link className="read_more" to={`${url}/Post4`}>Read more 4</Link>
-				</li>
-			</ul>
-      <Switch>
-				<Route path={`${path}/:PostId`}>
-					<Topic />
-        </Route>
-        <Route path={`${path}/about`} component={About} />
-			</Switch>
-		</div>
-	);
-};
-
-const Topic = () => {
-	let { PostId } = useParams();
-	return { PostId };
-};
-
-export default Posts;
+export default posts;
