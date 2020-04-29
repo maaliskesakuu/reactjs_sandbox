@@ -1,0 +1,27 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: #4A4857;
+  color: white;
+  height: 100vh;
+  overflow: auto;
+}
+
+#vespa {
+  float: left;
+  width: 30vw;
+  margin: 0 2rem 2rem;
+  border-radius: 3px;
+}
+
+.about_text {
+  margin: 2rem;
+  line-height: 1.6rem;
+}
