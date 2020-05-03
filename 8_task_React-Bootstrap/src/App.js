@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './Nav';
 import Home from './Home/Home';
 import About from './About';
@@ -13,9 +12,15 @@ const App = () => {
 			<Header />
 			<main>
 				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/about" component={About} />
-					<Route path="/blog" component={Blog} />
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/blog">
+						<Blog />
+					</Route>
 				</Switch>
 			</main>
 		</Router>

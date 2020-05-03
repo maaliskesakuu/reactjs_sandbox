@@ -1,57 +1,49 @@
-import React, { Component } from 'react';
-import Post from '../Post/Post';
-import './Blog.css';
+import React from 'react';
+import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import Topic from '../Post/Post';
+import posts from '../posts';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import CardDeck from 'react-bootstrap/CardDeck';
+import Container from 'react-bootstrap/Container';
 
-const posts = [
-	{
-		id: 1,
-		img: 'https://source.unsplash.com/featured/?cat',
-		title: 'Lorem ipsum dolor sit amet',
-		desc:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui tellus, malesuada nec maximus sed, dignissim t purus.',
-	},
-	{
-		id: 2,
-		img: 'https://source.unsplash.com/featured/?dog',
-		title: 'Lorem ipsum',
-		desc:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet feugiat metus, eget suscipit erat. Quisque volutpat dapibus risus, et dapibus sem mattis at.',
-	},
-	{
-		id: 3,
-		img: 'https://source.unsplash.com/featured/?sheep',
-		title: 'Lorem ipsum dolor',
-		desc:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra, arcu et tincidunt vestibulum, tellus velit tincidunt leo, nec vestibulum dolor orci id tortor.',
-	},
-	{
-		id: 4,
-		img: 'https://source.unsplash.com/featured/?lamb',
-		title: 'Lorem ipsum dolor sit',
-		desc:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non justo enim. Proin nibh tortor, interdum ut magna vel, porta tristique lacus. Praesent eget facilisis sapien.',
-	},
-];
+const Blog = () => {
+	let match = useRouteMatch();
+	const post = posts;
 
-class Blog extends Component {
-	state = {
-		posts: posts,
-	};
+	const postsList = post.map((post) => {
+		return (
+			<div key={post.id}>
+				<Card bg="dark" text="white" className="mt-5" border="secondary" style={{ width: '15rem' }}>
+					<Card.Img variant="top" src={post.img} alt={post.title} />
+					<Card.Body>
+						<Card.Title>{post.title}</Card.Title>
+						<Card.Text>{post.desc}</Card.Text>
+						<Button variant="light" block>
+							<Link to={`${match.url}/${post.title}`}>
+								<div>Read more</div>
+							</Link>
+						</Button>
+					</Card.Body>
+				</Card>
+			</div>
+		);
+	});
 
-	render() {
-		const postsList = this.state.posts.map((post) => {
-			return (
-				<Post
-					key={post.id}
-					img={post.img}
-					title={post.title}
-					desc={post.desc}
-				/>
-			);
-		});
-
-		return <div className="post_items">{postsList}</div>;
-	}
-}
+	return (
+		<div>
+			<Switch>
+				<Route path="/blog/:postId">
+					<Topic />
+				</Route>
+				<Route path={match.path}>
+					<Container>
+						<CardDeck>{postsList}</CardDeck>
+					</Container>
+				</Route>
+			</Switch>
+		</div>
+	);
+};
 
 export default Blog;
