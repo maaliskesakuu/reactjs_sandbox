@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 const NewPost = () => {
 	return (
 		<Container>
-			<Form className="mt-5">
+			<Form className="mt-5 mx-lg-5 px-lg-5">
 				<h2 className="mb-3">
 					Add a New Post
 				</h2>
