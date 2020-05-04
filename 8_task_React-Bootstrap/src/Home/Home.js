@@ -7,7 +7,7 @@ const Home = () => {
 	return (
 		<Container fluid>
 			<Row>
-				<Col className="text-center m-5">Welcome to my portfolio!</Col>
+				<Col className="text-center m-5"><h1>Welcome to my portfolio!</h1></Col>
 			</Row>
 		</Container>
 	);
