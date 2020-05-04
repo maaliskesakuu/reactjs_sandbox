@@ -14,7 +14,7 @@ const Blog = () => {
 	const postsList = post.map((post) => {
 		return (
 			<div key={post.id}>
-				<Card bg="dark" text="white" className="mt-5" border="secondary" style={{ width: '15rem' }}>
+				<Card bg="dark" text="white" className="mt-5" border="secondary" style={{ width: '13rem' }}>
 					<Card.Img variant="top" src={post.img} alt={post.title} />
 					<Card.Body>
 						<Card.Title>{post.title}</Card.Title>

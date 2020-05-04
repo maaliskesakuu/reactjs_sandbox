@@ -19,8 +19,11 @@ const Header = () => {
 					<LinkContainer to="/about">
 						<NavItem className="mr-5">About</NavItem>
 					</LinkContainer>
-					<LinkContainer to="/blog">
+					<LinkContainer className="mr-5" to="/blog">
 						<NavItem>Blog</NavItem>
+					</LinkContainer>
+					<LinkContainer to="/form">
+						<NavItem>Form</NavItem>
 					</LinkContainer>
 				</Nav>
 			</Navbar.Collapse>
