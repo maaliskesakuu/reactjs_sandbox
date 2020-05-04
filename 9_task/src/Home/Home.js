@@ -7,7 +7,7 @@ const Home = () => {
 	return (
 		<Container fluid>
 			<Row>
-				<Col className="text-center m-5">This is the homepage!</Col>
+				<Col className="text-center m-5"><h1>This is the homepage!</h1></Col>
 			</Row>
 		</Container>
 	);

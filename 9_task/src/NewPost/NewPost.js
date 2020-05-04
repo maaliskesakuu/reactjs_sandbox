@@ -8,9 +8,9 @@ const NewPost = () => {
 	return (
 		<Container>
 			<Form className="mt-5">
-				<Form.Text className="mb-3">
+				<h2 className="mb-3">
 					Add a New Post
-				</Form.Text>
+				</h2>
 				<Form.Group>
 					<Form.Label>Title</Form.Label>
 					<Form.Control
