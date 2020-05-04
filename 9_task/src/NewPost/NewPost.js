@@ -25,11 +25,12 @@ const NewPost = () => {
         </Form.Group>
         <Form.Group>
 					<Form.Label>Author</Form.Label>
-					<Form.Control
-						type="text"
-					/>
+					<Form.Control as="select">
+						<option>Tanja</option>
+						<option>someone else</option>
+					</Form.Control>
 				</Form.Group>
-				<Button variant="light" block type="submit">
+				<Button variant="light" block type="submit" className="mt-4">
 					Add Post
 				</Button>
 			</Form>

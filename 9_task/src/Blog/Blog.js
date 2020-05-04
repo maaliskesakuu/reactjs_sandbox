@@ -13,8 +13,8 @@ const Blog = () => {
 		const response = await fetch('//jsonplaceholder.typicode.com/photos');
 
 		const data = await response.json();
-		console.log(data);
-		setPhotos(data);
+		let newData = data.splice(1, 10);
+		setPhotos(newData);
 	};
 
 	return (
