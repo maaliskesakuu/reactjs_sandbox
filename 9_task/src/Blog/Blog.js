@@ -3,7 +3,8 @@ import Photo from '../Photo';
 import Container from 'react-bootstrap/Container';
 import { Switch, Route, useRouteMatch, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import Card, { CardFooter } from 'react-bootstrap/Card';
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
 
 const Blog = () => {
 	let match = useRouteMatch();
@@ -21,63 +22,45 @@ const Blog = () => {
 		setPhotos(newData);
 	};
 
-	return (
-		<Container className="mt-5">
-			{photos.map((photo) => (
-				<div key={photo.id}>
-					<Card
-						bg="dark"
-						text="white"
-						className="mt-5"
-						style={{ width: '15rem' }}
-					>
-						<Card.Body>
-							<Card.Title>{photo.title}</Card.Title>
-							<Card.Img
-								variant="bottom"
-								src={photo.thumbnailUrl}
-								alt={photo.title}
-							/>
-							<Button variant="light" className="mt-3">
-								<Link to={`${match.url}/${photo.id}`}>
-									<div>Read more</div>
-								</Link>
-							</Button>
-						</Card.Body>
-					</Card>
-				</div>
-			))}
-		</Container>
-	);
-	// const photoList = () => {
-	// 	return (
-	// 		<Container className="mt-5">
-	// 			{photos.map((photo) => (
-	// 				<div key={photo.id}>
-	// 					<Photo title={photo.title} thumbnailUrl={photo.thumbnailUrl} />
-	// 					<Button>
-	// 						<Link to={`${match.url}/${photo.id}`}></Link>Read more
-	// 					</Button>
-	// 				</div>
-	// 			))}
-	// 		</Container>
-	// 	);
-	// };
+	const photoList = photos.map((photo) => {
+		return (
+			<div>
+				<Card
+					bg="dark"
+					text="white"
+					className="mt-5"
+					style={{ width: '18rem' }}
+				>
+					<Card.Body key={photo.id}>
+						<Card.Title>{photo.title}</Card.Title>
+						<Card.Img
+							variant="bottom"
+							src={photo.thumbnailUrl}
+							alt={photo.title}
+						/>
+						<Button variant="light" className="mt-3">
+							<Link to={`${match.url}/${photo.id}`}>
+								<div>Read more</div>
+							</Link>
+						</Button>
+					</Card.Body>
+				</Card>
+			</div>
+		);
+	});
 
-	// return (
-	// 	<div>
-	// 		<Switch>
-	// 			<Route path="/blog/:photoId">
-	// 				<Photo />
-	// 			</Route>
-	// 			<Route path={match.path}>
-	// 				<Container>
-	// 					<div>{photoList}</div>
-	// 				</Container>
-	// 			</Route>
-	// 		</Switch>
-	// 	</div>
-	// );
+	return (
+		<Switch>
+			<Route path="/blog/:photoId">
+				<Photo />
+			</Route>
+			<Route path={match.path}>
+				<Container>
+					<CardDeck>{photoList}</CardDeck>
+				</Container>
+			</Route>
+		</Switch>
+	);
 };
 
 export default Blog;
