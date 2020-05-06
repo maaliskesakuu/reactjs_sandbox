@@ -7,10 +7,21 @@ const FullPost = () => {
 	const [loadedPost, setLoadedPost] = useState();
 	let { postId } = useParams();
 
+	// useEffect(() => {
+	// 	if (!loadedPost) {
+	// 		axios
+	// 			.get('https://jsonplaceholder.typicode.com/photos/' + postId)
+	// 			.then((response) => {
+	// 				console.log(response.data);
+	// 				setLoadedPost(response.data);
+	// 			});
+	// 	}
+	// });
+
 	useEffect(() => {
 		if (!loadedPost) {
 			axios
-				.get('https://jsonplaceholder.typicode.com/photos/' + postId)
+				.get('http://localhost:3001/posts/' + postId)
 				.then((response) => {
 					console.log(response.data);
 					setLoadedPost(response.data);
@@ -27,10 +38,10 @@ const FullPost = () => {
 	if (loadedPost) {
 		postData = (
 			<div className="fullPost">
-				<h1>Loading post</h1>
 				<h1>Post {loadedPost.id}</h1>
 				<p>{loadedPost.title}</p>
-				<img src={loadedPost.thumbnailUrl} alt={loadedPost.title} />
+				<p>{loadedPost.desc}</p>
+				<img src={loadedPost.img} alt={loadedPost.title} />
 			</div>
 		);
 	}
