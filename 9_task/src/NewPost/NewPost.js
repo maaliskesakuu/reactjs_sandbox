@@ -13,7 +13,7 @@ const NewPost = () => {
 	const changeValueHandler = (e) => {
 		setNewpost({
 			...newPost,
-			[e.targer.name]: e.target.value,
+			[e.target.name]: e.target.value,
 		});
 	};
 
@@ -44,7 +44,7 @@ const NewPost = () => {
 						<option>someone else</option>
 					</Form.Control>
 				</Form.Group> */}
-				<Button variant="light" block type="submit" className="mt-4" onClick={addPostHandler}>
+				<Button variant="dark" block type="submit" className="mt-4" onClick={addPostHandler}>
 					Add Post
 				</Button>
 			</Form>

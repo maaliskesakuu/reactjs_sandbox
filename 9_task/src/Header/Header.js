@@ -8,6 +8,9 @@ import { LinkContainer } from 'react-router-bootstrap';
 const Header = () => {
 	return (
 		<Navbar bg="light" variant="light" expand="md">
+			<LinkContainer to="/#">
+				<Navbar.Brand>Tanja Lehtinen</Navbar.Brand>
+			</LinkContainer>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 				<Nav>

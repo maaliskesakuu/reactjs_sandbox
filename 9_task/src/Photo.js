@@ -24,7 +24,6 @@ const Photo = () => {
 	let postData = undefined;
 
 	if (photoId) {
-		// postData = <h1>Loading post</h1>;
 		postData = (
 			<Container className="mt-5 px-5">
 				<Spinner animation="border" role="status" size="sm">
