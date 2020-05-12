@@ -36,12 +36,13 @@ const Photo = () => {
     postData = (
       <Container key={post.id}>
         <Row className="mt-5">
-          <Col xs={4} sm={4}>
+          <Col xs={4} sm={4} md={4} lg={4}>
             <Image src={post.img} alt="post.title" thumbnail />
           </Col>
 
-          <Col xs={8} sm={8}>
+          <Col xs={8} sm={8} md={8} lg={8}>
             <h3>{post.title}</h3>
+            <p>{post.desc}</p>
             <p>{post.description}</p>
             <Button variant="dark">
               <Link to="/blog">

@@ -6,6 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
+import './Blog.css'
 
 const Blog = () => {
   let match = useRouteMatch();
@@ -38,12 +42,13 @@ const Blog = () => {
           key={photo.id}
           bg="dark"
           text="white"
-          className="mt-5"
-          style={{ width: '18rem' }}
+          className="my-5"
+          style={{ width: '18rem', boxShadow: "0 5px 15px #292b2c" }}
         >
           <Card.Body>
             <Card.Title>{photo.title}</Card.Title>
-            <Card.Img variant="bottom" src={photo.img} alt={photo.title} />
+            <Card.Img variant="bottom" src={photo.img} alt={photo.title} className="mb-3" style={{ borderRadius: "3px"}}/>
+            <Card.Text style={{ minHeight: "15vh"}}>{photo.desc}</Card.Text>
             <Button variant="light" className="mt-3" block>
               <Link to={`${match.url}/${photo.id}`}>
                 <div>Read more</div>
@@ -51,11 +56,10 @@ const Blog = () => {
             </Button>
             <Button
               variant="light"
-              className="mt-3"
-              block
+              className="trash"
               onClick={removePostHandler.bind(this, photo.id)}
             >
-              Delete this post
+              <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
             </Button>
           </Card.Body>
         </Card>
