@@ -35,16 +35,16 @@ const Photo = () => {
   if (post) {
     postData = (
       <Container key={post.id}>
-        <Row className="mt-5">
+        <Row className="py-5" style={{minHeight: "80vh"}}>
           <Col xs={4} sm={4} md={4} lg={4}>
-            <Image src={post.img} alt="post.title" thumbnail />
+            <Image src={post.img} alt="post.title" thumbnail style={{ padding: "0", border: "none" }}/>
           </Col>
 
           <Col xs={8} sm={8} md={8} lg={8}>
             <h3>{post.title}</h3>
             <p>{post.desc}</p>
             <p>{post.description}</p>
-            <Button variant="dark">
+            <Button variant="dark" style={{ width: "25vw"}}>
               <Link to="/blog">
                 <div>Back to blog page</div>
               </Link>

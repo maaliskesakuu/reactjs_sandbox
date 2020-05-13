@@ -3,24 +3,27 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
 import { LinkContainer } from 'react-router-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHatCowboy } from '@fortawesome/free-solid-svg-icons';
+import './Header.css';
 
 
 const Header = () => {
 	return (
-		<Navbar bg="light" variant="light" expand="md">
+		<Navbar bg="light" variant="light" expand="md" className="navbar">
 			<LinkContainer to="/#">
-				<Navbar.Brand>Tanja Lehtinen</Navbar.Brand>
+				<Navbar.Brand><FontAwesomeIcon icon={faHatCowboy}></FontAwesomeIcon></Navbar.Brand>
 			</LinkContainer>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 				<Nav>
 					<LinkContainer to="/">
-						<NavItem className="mr-5">Home</NavItem>
+						<NavItem className="mr-5 link">Home</NavItem>
 					</LinkContainer>
 					<LinkContainer to="/blog">
-						<NavItem className="mr-5">Blog</NavItem>
+						<NavItem className="mr-5 link">Blog</NavItem>
 					</LinkContainer>
-					<LinkContainer to="/new_post">
+					<LinkContainer to="/new_post" className="link">
 						<NavItem>NewPost</NavItem>
 					</LinkContainer>
 				</Nav>

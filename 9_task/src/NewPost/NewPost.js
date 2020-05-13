@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
 const NewPost = () => {
@@ -25,13 +27,12 @@ const NewPost = () => {
     axios.post('http://localhost:3001/posts', newPost).then(response => {
       console.log(response.data);
     });
-    // setNewpost('');
   };
 
   return (
     <Container>
-      <Form className="mt-5 mx-lg-5 px-lg-5">
-        <h2 className="mb-3">Add a New Post</h2>
+      <Form className="pt-5 px-lg-5 px-lg-5" onSubmit={addPostHandler}>
+        <h2 className="mb-5">Add a New Post</h2>
         <Form.Group>
           <Form.Label>Title</Form.Label>
           <Form.Control
@@ -39,6 +40,7 @@ const NewPost = () => {
             name="title"
             id="title"
             onChange={changeValueHandler}
+            required
           />
         </Form.Group>
         <Form.Group>
@@ -49,6 +51,9 @@ const NewPost = () => {
             id="img"
             onChange={changeValueHandler}
           />
+          <Form.Text className="text-muted">
+            e.g. https://source.unsplash.com/1600x900/?dog
+          </Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>Short description</Form.Label>
@@ -58,6 +63,10 @@ const NewPost = () => {
             id="desc"
             onChange={changeValueHandler}
           />
+          <Form.Text className="text-muted">
+            Add here a short description (for instance, a lead paragraph) of the
+            post.
+          </Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>Content</Form.Label>
@@ -67,15 +76,18 @@ const NewPost = () => {
             id="description"
             onChange={changeValueHandler}
           />
+          <Form.Text className="text-muted">
+            Add here the actual text of the post.
+          </Form.Text>
         </Form.Group>
         <Button
           variant="dark"
-          block
           type="submit"
-          className="mt-4"
-          onClick={addPostHandler}
+          className="mt-4 mb-5"
+          // onClick={addPostHandler}
+          style={{ width: "25vw"}}
         >
-          Add Post
+          <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
         </Button>
       </Form>
     </Container>

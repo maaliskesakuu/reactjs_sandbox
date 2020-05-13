@@ -7,9 +7,9 @@ import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-import './Blog.css'
+import './Blog.css';
 
 const Blog = () => {
   let match = useRouteMatch();
@@ -24,6 +24,7 @@ const Blog = () => {
 
   const removePostHandler = id => {
     console.log(id);
+    alert('Are you sure you want to delete this post?');
 
     axios
       .delete('http://localhost:3001/posts/' + id)
@@ -43,13 +44,19 @@ const Blog = () => {
           bg="dark"
           text="white"
           className="my-5"
-          style={{ width: '18rem', boxShadow: "0 5px 15px #292b2c" }}
+          style={{ width: '18rem', boxShadow: '0 5px 15px #343A40' }}
         >
           <Card.Body>
             <Card.Title>{photo.title}</Card.Title>
-            <Card.Img variant="bottom" src={photo.img} alt={photo.title} className="mb-3" style={{ borderRadius: "3px"}}/>
-            <Card.Text style={{ minHeight: "15vh"}}>{photo.desc}</Card.Text>
-            <Button variant="light" className="mt-3" block>
+            <Card.Img
+              variant="bottom"
+              src={photo.img}
+              alt={photo.title}
+              className="mb-3"
+              style={{ borderRadius: '2px', width: '100%' }}
+            />
+            <Card.Text style={{ minHeight: '20vh' }}>{photo.desc}</Card.Text>
+            <Button variant="light" className="mt-3">
               <Link to={`${match.url}/${photo.id}`}>
                 <div>Read more</div>
               </Link>

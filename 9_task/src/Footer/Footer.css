@@ -1,0 +1,8 @@
+.footer {
+  background-color: #343A40;
+  color: white;
+  height: 15vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}

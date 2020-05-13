@@ -1,7 +1,7 @@
 Button.trash {
   position: absolute;
-  right: -0.8rem;
-  top: -0.8rem;
+  right: -0.7rem;
+  top: -0.7rem;
   border-radius: 50%;
-  box-shadow: 0 3px 10px #292b2c;
+  box-shadow: 0 3px 10px #343a40;
 }
