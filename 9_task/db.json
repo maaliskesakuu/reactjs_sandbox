@@ -62,20 +62,6 @@
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, nibh ac convallis laoreet, sapien leo.",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum velit odio, pulvinar sed laoreet in, congue ut ex. Maecenas in pharetra quam. Sed tincidunt, purus vitae elementum convallis, nisi lacus elementum sapien, non efficitur leo dolor a felis. Donec elementum arcu quis ullamcorper dictum. Mauris dictum.",
       "id": 10
-    },
-    {
-      "title": "Lorem ipsum dolor sit",
-      "img": "https://source.unsplash.com/1600x900/?mountain",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, nibh ac convallis laoreet, sapien leo.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum velit odio, pulvinar sed laoreet in, congue ut ex. Maecenas in pharetra quam. Sed tincidunt, purus vitae elementum convallis, nisi lacus elementum sapien, non efficitur leo dolor a felis. Donec elementum arcu quis ullamcorper dictum. Mauris dictum.",
-      "id": 11
-    },
-    {
-      "title": "Lorem ipsum dolor sit",
-      "img": "https://source.unsplash.com/1600x900/?mountain",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dapibus, nibh ac convallis laoreet, sapien leo.",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum velit odio, pulvinar sed laoreet in, congue ut ex. Maecenas in pharetra quam. Sed tincidunt, purus vitae elementum convallis, nisi lacus elementum sapien, non efficitur leo dolor a felis. Donec elementum arcu quis ullamcorper dictum. Mauris dictum.",
-      "id": 12
     }
   ]
 }
