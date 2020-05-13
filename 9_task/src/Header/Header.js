@@ -10,7 +10,7 @@ import './Header.css';
 
 const Header = () => {
 	return (
-		<Navbar bg="light" variant="light" expand="md" className="navbar">
+		<Navbar bg="light" variant="light" expand="md" className="navbar px-5" sticky="top">
 			<LinkContainer to="/#">
 				<Navbar.Brand><FontAwesomeIcon icon={faHatCowboy}></FontAwesomeIcon></Navbar.Brand>
 			</LinkContainer>

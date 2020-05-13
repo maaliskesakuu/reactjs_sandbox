@@ -22,14 +22,6 @@ const Blog = () => {
     });
   }, []);
 
-  const confirmDelete = () => {
-    if (window.confirm('Are you sure you wish to delete this item?')) {
-      return true;
-    }
-
-    return false;
-  };
-
   const removePostHandler = id => {
     console.log(id);
     if (window.confirm('Are you sure you wish to delete this post?') === false) {

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
 const NewPost = () => {
@@ -86,8 +84,7 @@ const NewPost = () => {
           className="mt-4 mb-5"
           // onClick={addPostHandler}
           style={{ width: "25vw"}}
-        >
-          <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+        >Add post
         </Button>
       </Form>
     </Container>
