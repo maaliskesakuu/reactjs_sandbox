@@ -22,9 +22,19 @@ const Blog = () => {
     });
   }, []);
 
+  const confirmDelete = () => {
+    if (window.confirm('Are you sure you wish to delete this item?')) {
+      return true;
+    }
+
+    return false;
+  };
+
   const removePostHandler = id => {
     console.log(id);
-    alert('Are you sure you want to delete this post?');
+    if (window.confirm('Are you sure you wish to delete this post?') === false) {
+      return false;
+    }
 
     axios
       .delete('http://localhost:3001/posts/' + id)
