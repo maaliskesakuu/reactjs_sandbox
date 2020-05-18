@@ -40,9 +40,8 @@ const Blog = () => {
 
   const photoList = photos.map(photo => {
     return (
-      <div>
+      <div key={photo.id}>
         <Card
-          key={photo.id}
           bg="dark"
           text="white"
           className="my-5"
