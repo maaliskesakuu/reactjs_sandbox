@@ -7,3 +7,10 @@ body {
 main {
   background-color: #F1FAFF;
 }
+
+@media (max-width: 600px) {
+  body {
+    border-top: 0 solid #F1FAFF;
+  }
+}
+
