@@ -12,25 +12,30 @@ import { faHatCowboy } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-	return (
-		<Router>
-			<Header />
-			<main>
-				<Switch>
-					<Route exact path="/">
-						<Home />
-					</Route>
-					<Route path="/blog">
-						<Blog />
-					</Route>
-					<Route path="/new_post">
-						<NewPost />
-					</Route>
-				</Switch>
-			</main>
-			<Footer text="Tanja Lehtinen" year="2020"><FontAwesomeIcon icon={faHatCowboy} style={{ color: "#F1FAFF"}}></FontAwesomeIcon></Footer>
-		</Router>
-	);
-};
+  return (
+    <Router>
+      <Header />
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/new_post">
+            <NewPost />
+          </Route>
+        </Switch>
+      </main>
+      <Footer text="Tanja Lehtinen" year="2020">
+        <FontAwesomeIcon
+          icon={faHatCowboy}
+          style={{ color: '#F1FAFF' }}
+        ></FontAwesomeIcon>
+      </Footer>
+    </Router>
+  );
+}
 
 export default App;
