@@ -1,1 +1,5 @@
-
+@media (max-width: 600px) {
+  body {
+    border-top: 0 solid white;
+  }
+}
