@@ -24,7 +24,7 @@ const Header = () => {
 						<NavItem className="mr-5 link">Blog</NavItem>
 					</LinkContainer>
 					<LinkContainer to="/new_post" className="link">
-						<NavItem>NewPost</NavItem>
+						<NavItem>New Post</NavItem>
 					</LinkContainer>
 				</Nav>
 			</Navbar.Collapse>
